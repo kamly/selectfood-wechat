@@ -1,1 +1,71 @@
 <!--index.wxml-->
+
+<!--选择框-->
+<view class="tab-header">
+  <view class="swiper-item {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichTab">
+    饭堂
+  </view>
+  <view class="swiper-item {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichTab">
+    外卖
+  </view>
+</view>
+
+<!--分页-->
+<swiper current="{{currentTab}}" class="swiper-box" bindchange="viewChange">
+
+  <!--饭堂-->
+  <swiper-item>
+    <view class="canteen">
+
+      <!--头部-->
+      <view class="header">
+        <view class="header-img">
+          <image src="http://ww1.sinaimg.cn/large/8c2e9604gy1fgci4g8fx3j20qo0m8gna.jpg"></image>
+        </view>
+      </view>
+
+       <!--内容-->
+      <view class="content">
+
+        <!--文字内容-->
+        <view class="text">
+
+          <!--选择-->
+          <view class="select-picker">
+            <view class="picker-where">
+              <view class="type-title">饭堂:</view>
+              <picker bindchange="bindPickerWhereChange" value="{{indexWhere}}" range="{{arrayWhere}}">
+                {{arrayWhere[indexWhere]}}
+              </picker>
+            </view>
+            <view class="picker-price">
+              <view class="type-title">价格:</view>
+              <picker bindchange="bindPickerPriceChange" value="{{indexPrice}}" range="{{arrayPrice}}">
+                {{arrayPrice[indexPrice]}}
+              </picker>
+            </view>
+          </view>
+          
+          <!--菜式-->
+          <view class="text-name">
+            菜式：123
+          </view>
+
+        </view>
+
+        <!--按钮-->
+        <view class="btn-confirm" bindtap="clickConfirm">
+          <image src="/images/image/rand.png" class="confirm-icon" />
+        </view>
+
+      </view>
+
+
+    </view>
+  </swiper-item>
+
+  <!--设置-->
+  <swiper-item>
+    2222
+  </swiper-item>
+</swiper>

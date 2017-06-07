@@ -1,1 +1,103 @@
 /**index.wxss**/
+
+/*选择框样式*/
+
+.tab-header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*选择框样式-单元*/
+
+.swiper-item {
+  padding-bottom: 10rpx;
+  width: 20%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #a6a6a8;
+  border-bottom: 5rpx solid #a6a6a8;
+}
+
+/*选择框样式-单元 激活状态*/
+
+.active {
+  color: #004769;
+  border-bottom: 5rpx solid #004769;
+}
+
+/*滑块视图*/
+
+.swiper-box {
+  height: 1000rpx;
+}
+
+/*饭堂*/
+
+.canteen {
+  margin: 100rpx 20rpx 20rpx 20rpx;
+  border: 1px #004769 solid;
+}
+
+/*饭堂 头部*/
+
+.canteen .header {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/*饭堂 头部 图片*/
+
+.canteen .header-img image {
+  width: 500rpx;
+  height: 400rpx;
+}
+
+/*饭堂 内容*/
+
+.canteen .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+/*饭堂 内容 文字*/
+
+.canteen .content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*饭堂 内容 选择器*/
+
+.canteen .content .select-picker {
+  display: flex;
+  flex-direction: column;
+}
+
+/*饭堂 内容 选择器-地点 ，饭堂 内容 选择器-价格*/
+
+.canteen .content .picker-where, .canteen .content .picker-price {
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+/*饭堂 内容 按钮-确认*/
+
+.canteen .content .btn-confirm {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/*饭堂 内容 按钮-确认 确认图标*/
+
+.btn-confirm .confirm-icon {
+  width: 120rpx;
+  height: 120rpx;
+  opacity: 1;
+}
