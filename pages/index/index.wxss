@@ -101,3 +101,15 @@
   height: 120rpx;
   opacity: 1;
 }
+
+
+/*外卖*/
+.sell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100rpx 20rpx 20rpx 20rpx;
+  border: 1px #004769 solid;
+  height: 600rpx;
+}
