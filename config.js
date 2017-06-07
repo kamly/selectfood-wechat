@@ -5,7 +5,7 @@ module.exports = {
     "EMP_ERR": 1,  // 查找不到数据
     "FAIL_ERR": 2   // 执行失败
   },
-  HOST: "https://charmingkamly.cn/selectfood/web/index.php"
+  HOST: "https://charmingkamly.cn/selectfood/index.php"
 };
 
 

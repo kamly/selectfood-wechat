@@ -20,7 +20,7 @@
       <!--头部-->
       <view class="header">
         <view class="header-img">
-          <image src="http://{{resultImg}}"></image>
+          <image src="{{resultImg}}"></image>
         </view>
       </view>
 

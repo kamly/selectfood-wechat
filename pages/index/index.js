@@ -21,8 +21,8 @@ Page({
     winWidth: 0,
     winHeight: 0,
 
-    resultImg: 'ww1.sinaimg.cn/large/8c2e9604gy1fgci4g8fx3j20qo0m8gna.jpg',
-    resultName: ''
+    resultImg: 'http://ww1.sinaimg.cn/large/8c2e9604gy1fgci4g8fx3j20qo0m8gna.jpg',
+    resultName: '你猜'
   },
 
 
@@ -32,7 +32,7 @@ Page({
     //获取系统信息 
     Util.getSystemInfo()
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         that.setData({
           winWidth: data.windowWidth,
           winHeight: data.windowHeight
@@ -67,13 +67,14 @@ Page({
     var where = that.data.arrayWhere[that.data.indexWhere];
     var price = that.data.arrayPrice[that.data.indexPrice];
     // console.log(where);
-    API.getCanteen(where, price)
+    API.getCanteen(where, parseInt(price))
       .then((res) => {
-        // console.log(res);
-        if (res.error == Config.ERR.NO_ERR) {
+        // console.log(res.data[0]);
+        console.log(res.data[0].data)
+        if (res.data[0].error == Config.ERR.NO_ERR) {
           that.setData({
-            resultImg: res.data.resultImg,
-            resultName: res.data.resultName
+            resultImg: res.data[0].data.img,
+            resultName: res.data[0].data.name
           })
         } else {
           console.log(res.error);
