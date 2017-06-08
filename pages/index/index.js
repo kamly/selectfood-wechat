@@ -21,8 +21,8 @@ Page({
     winWidth: 0,
     winHeight: 0,
 
-    resultImg: 'http://ww1.sinaimg.cn/large/8c2e9604gy1fgci4g8fx3j20qo0m8gna.jpg',
-    resultName: '你猜'
+    resultImg: 'http://ww1.sinaimg.cn/large/8c2e9604gy1fgdp6j44n0j20hs0hsac4.jpg',
+    resultName: 'waiyee'
   },
 
 
