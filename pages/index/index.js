@@ -40,6 +40,22 @@ Page({
       })
   },
 
+  // 选择地点
+  bindPickerWhereChange: function (e) {
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      indexWhere: e.detail.value
+    })
+  },
+
+  // 选择价格
+  bindPickerPriceChange: function (e) {
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      indexPrice: e.detail.value
+    })
+  },
+
   // 滑动界面切换
   viewChange: function (e) {
     var that = this;
@@ -77,7 +93,8 @@ Page({
             resultName: res.data[0].data.name
           })
         } else {
-          console.log(res.error);
+          // console.log(res.data[0].data);
+          Util.UI.loading(1000, res.data[0].data);
         }
       });
   }
